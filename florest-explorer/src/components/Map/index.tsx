@@ -54,11 +54,16 @@ const Map: React.FC<EquipmentComponentProps> = ( {equipmentList, equipmentModelL
 
       setMap(initializedMap);
 
-      markers.forEach((marker) => {
-        new window.google.maps.Marker({
-          position: { lat: marker.lat, lng: marker.lng },
+      markers.forEach((markerData) => {
+        const marker = new window.google.maps.Marker({
+          position: { lat: markerData.lat, lng: markerData.lng },
           map: initializedMap,
-          title: marker.title,
+          title: markerData.title,
+        });
+
+        // Adiciona evento onClick ao marcador
+        marker.addListener("click", () => {
+          alert(`Você clicou no marcador: ${markerData.title}`);
         });
       });
     }

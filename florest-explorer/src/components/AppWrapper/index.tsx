@@ -6,6 +6,7 @@ import IEquipmentStateHistory from '../../interfaces/IEquipmentStateHistory';
 import Map from '../Map'
 import { Status, Wrapper } from '@googlemaps/react-wrapper';
 import './AppWrapper.scss'
+import { DataTab } from '../DataTab';
 
 interface EquipmentComponentProps {
     equipmentList: IEquipment[];

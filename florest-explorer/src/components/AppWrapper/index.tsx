@@ -19,7 +19,6 @@ const render = (status: Status) => (<h1>{status}</h1>);
 
 export const AppWrapper: React.FC<EquipmentComponentProps> = ( {equipmentList, equipmentModelList, equipmentPositionList, equipmentStateList, equipmentStateHistoryList} ) => {
 
-    console.log(equipmentList);
     return (
         <div className='app-wrapper'>
             <Wrapper apiKey={"AIzaSyAfLVhiScppGdM72PP662XUfSXIbDQfUHs"} render={render}>

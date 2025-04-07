@@ -37,6 +37,8 @@ const Map: React.FC<EquipmentComponentProps> = ( {equipmentList, equipmentModelL
         lng: positions?.lon,
         title: name+'\n'+statusName
       })
+    } else {
+      console.error("Erro relacionando os dados do equipamento: "+name);
     }
   });
 
